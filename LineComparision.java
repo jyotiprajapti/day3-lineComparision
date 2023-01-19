@@ -37,11 +37,27 @@ public class LineComparision {
 	            System.out.println("Both lines are Not equal");
 	        }
 	    }
+	    public static void lengthCompare(){
+	        System.out.println("Enter Values to check the lines: ");
+	        Scanner sc = new Scanner(System.in);
+	        System.out.println("Enter len1 value: ");
+	        double len1 = sc.nextInt();
+	        System.out.println("Enter len2 value: ");
+	        double len2 = sc.nextInt();
+	        if(Double.compare(len1,len2) == 0){
+	            System.out.println("len1=len2");
+	        }else if (Double.compare(len1,len2) < 0){
+	            System.out.println("len1 is less than len2");
+	        }else {
+	            System.out.println("len1 is greater than len2");
+	        }
+	    }
 
 
 	    public static void main(String[] args) {
 	      System.out.println("Welcome to line comparision");
 	      length();
 	      lengthEquals();
+	      lengthCompare();
 }
 }
